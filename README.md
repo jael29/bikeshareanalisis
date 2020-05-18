@@ -10,3 +10,5 @@ The rest of resources I consulted from the Pandas course in Udacity for this cou
 
 1- Added comments in main function to describe what each function does. 
 
+2- may 18th 2020 10:16 am. Added a function sleep() to replace time.sleep(). 
+
