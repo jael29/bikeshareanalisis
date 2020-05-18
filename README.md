@@ -19,6 +19,33 @@ for bikeshare usage for Chicago, New York City, and Wasghinton.
 I used a csv file for Chicago, New York City, and Washington.
 I included the .py file with the scripting code. 
 
+pandas library used
+numpy library used
+time library used. 
+
+used pip3 install pandas
+used pip3 install numpy
+
+Just imported them in the code. 
+
+Time module does not need to be installed, as it comes with python. 
+
+### Resources and dependencies
+python           : 3.8.2.final.0
+python-bits      : 64
+OS               : Darwin
+OS-release       : 19.4.0
+machine          : x86_64
+processor        : i386
+byteorder        : little
+matplotlib       : 3.2.1
+pandas           : 1.0.3
+numpy            : 1.18.4
+pytz             : 2019.3
+dateutil         : 2.8.1
+pip              : 20.1
+setuptools       : 41.2.0
+LOCALE           : None.UTF-8
 
 ### Credits
 Resources I used to narrow down certain problems I was not too sure about. 

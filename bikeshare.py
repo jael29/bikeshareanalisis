@@ -280,3 +280,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+    pd.show_versions() # to show versions of packages and libraries used. 
