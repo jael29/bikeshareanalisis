@@ -40,7 +40,8 @@ def get_filters():
               "Chicago, New York City, Washington? \n")
         sleep(1)
         city = input("\nPlease write Chicago, New York City or Washington: \n")
-        city = city.lower()
+        city = city.lower() 
+        # changing input to lower case to prevent problems with case letters
         # print(city)
 
         if city in ('chicago', 'new york city', 'washington'):
@@ -55,6 +56,7 @@ def get_filters():
         month = input("\nPlease type a month from January to June"
                       " (full month name) or type all: \n")
         month = month.lower()
+        # changing input to lower case to prevent problems with case letters
         # print(month)
 
         if month in ('january', 'february', 'march', 'april',
@@ -70,6 +72,7 @@ def get_filters():
         day = input("\n Please select all or type a day of "
                     "the week Monday through Sunday: \n")
         day = day.lower()
+        # changing input to lower case to prevent problems with case letters
 
         if day in ('monday', 'tuesday', 'wednesday',
                    'thursday', 'friday', 'saturday', 'sunday', 'all'):
