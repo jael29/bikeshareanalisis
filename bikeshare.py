@@ -255,6 +255,7 @@ def main():
 
             if answer == 'yes' or answer == 'y' or answer == 'ye':
                 print(df.head(count*5))
+                # used to print 5 more rows of the raw data.
                 time.sleep(1)
                 count += 1
             else:
