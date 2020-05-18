@@ -12,3 +12,5 @@ The rest of resources I consulted from the Pandas course in Udacity for this cou
 
 2- may 18th 2020 10:16 am. Added a function sleep() to replace time.sleep(). 
 
+3- may 18th 2020 10:25 am Added comments to describe sleep function definition
+
