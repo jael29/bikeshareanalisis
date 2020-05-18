@@ -5,6 +5,11 @@ import numpy as np
 CITY_DATA = { 'chicago': 'chicago.csv',
               'new york city': 'new_york_city.csv',
               'washington': 'washington.csv' }
+city ='washington'
+#  setting default value to washington since conditional on bottom, 
+#  looks for if city value is chicago or washington. 
+#  this is a way to prevent it from looking for gender and birth year, since Washington
+#  Does not contain a column for Gender or Birth year. 
 
 def get_filters():
     """
@@ -19,9 +24,9 @@ def get_filters():
     # TO DO: get user input for city (chicago, new york city, washington). HINT: Use a while loop to handle invalid inputs
     while True:
         print("Which city would you like to view data for: Chicago, New York, Washington? \n")
-        city = input("\nPlease write Chicago, New York or Washington: ")
+        city = input("\nPlease write Chicago, New York City or Washington: ")
         city = city.lower()
-        print(city)
+        # print(city)
         
         if city == 'chicago' or city == 'new york city' or city == 'washington' or city == 'all':
             break
@@ -165,19 +170,23 @@ def user_stats(df):
 
     # TO DO: Display counts of gender
     
-    gender_types = df['Gender'].fillna('N/A')
-    gender_types = gender_types.value_counts()
-    print('The total type of genders are:\n', gender_types)
+    #  Setting a conditional since Washington csv does not have Gender or Birth Year columns.
+    #  This is to prevent an error
+    if CITY_DATA[city] == 'chicago' or CITY_DATA[city] == 'new york city':
+    
+        gender_types = df['Gender'].fillna('N/A')
+        gender_types = gender_types.value_counts()
+        print('The total type of genders are:\n', gender_types)
 
-    # TO DO: Display earliest, most recent, and most common year of birth
-    earliest_birth_year = df['Birth Year'].min()
-    print('The earliest year of birth is: ', earliest_birth_year)
+        # TO DO: Display earliest, most recent, and most common year of birth
+        earliest_birth_year = df['Birth Year'].min()
+        print('The earliest year of birth is: ', earliest_birth_year)
 
-    recent_birth_year = df['Birth Year'].max()
-    print('The most recent year of birth is: ', recent_birth_year)
+        recent_birth_year = df['Birth Year'].max()
+        print('The most recent year of birth is: ', recent_birth_year)
 
-    common_birth_year = df['Birth Year'].mode()[0]
-    print('The most common Birth Year is: ', common_birth_year)
+        common_birth_year = df['Birth Year'].mode()[0]
+        print('The most common Birth Year is: ', common_birth_year)
 
 
     print("\nThis took %s seconds." % (time.time() - start_time))
@@ -193,7 +202,7 @@ def main():
         station_stats(df)
         trip_duration_stats(df)
         user_stats(df)
-
+        # print(df)
         restart = input('\nWould you like to restart? Enter yes or no.\n')
         if restart.lower() != 'yes':
             break
