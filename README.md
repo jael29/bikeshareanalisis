@@ -7,3 +7,6 @@ https://stackoverflow.com/questions/53037698/how-can-i-find-the-most-frequent-tw
 https://stackoverflow.com/questions/22304500/multiple-or-condition-in-python
 
 The rest of resources I consulted from the Pandas course in Udacity for this course. 
+
+1- Added comments in main function to describe what each function does. 
+

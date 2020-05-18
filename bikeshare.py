@@ -239,9 +239,10 @@ def main():
         city, month, day = get_filters()
         df = load_data(city, month, day)
 
-        time_stats(df)
-        station_stats(df)
-        trip_duration_stats(df)
+        time_stats(df) # function frequent times of travel
+        station_stats(df) # function to calculate frequent start,
+        # end, stations
+        trip_duration_stats(df) # function to calculate total travel time
         user_stats(df)
 
         count = 1  # counter used to multiply the count number * 5
