@@ -14,6 +14,7 @@ city = 'washington'
 
 def sleep(seconds):
     time.sleep(seconds)
+    # sleep function takes one argument for seconds to delay
 
 
 def get_filters():
